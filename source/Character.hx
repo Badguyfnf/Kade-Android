@@ -15,7 +15,7 @@ class Character extends FlxSprite
 
 	public var isPlayer:Bool = false;
 	public var curCharacter:String = 'bf';
-	public var color:FlxColor = 0xFFFF0000;
+	public var healthBarcolor:FlxColor = 0xFFFF0000;
 
 	public var holdTimer:Float = 0;
 
@@ -310,7 +310,7 @@ class Character extends FlxSprite
 
 				flipX = true;
 
-				color = 0xFF31B0D1;
+				healthBarcolor = 0xFF31B0D1;
 
 			case 'bf-christmas':
 				var tex = Paths.getSparrowAtlas('characters/bfChristmas');
@@ -341,7 +341,7 @@ class Character extends FlxSprite
 
 				flipX = true;
 
-				color = 0xFF31B0D1;
+				healthBarcolor = 0xFF31B0D1;
 
 			case 'bf-car':
 				var tex = Paths.getSparrowAtlas('characters/bfCar');
@@ -369,7 +369,7 @@ class Character extends FlxSprite
 
 				flipX = true;
 
-				color = 0xFF31B0D1;
+				healthBarcolor = 0xFF31B0D1;
 
 			case 'bf-pixel':
 				frames = Paths.getSparrowAtlas('characters/bfPixel');
@@ -405,7 +405,7 @@ class Character extends FlxSprite
 
 				flipX = true;
 
-				color = 0xFF7BD6F6;
+				healthBarcolor = 0xFF7BD6F6;
 
 			case 'bf-pixel-dead':
 				frames = Paths.getSparrowAtlas('characters/bfPixelsDEAD');
