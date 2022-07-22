@@ -322,7 +322,9 @@ class TitleState extends MusicBeatState
 
 			MainMenuState.firstStart = true;
 
+			new FlxTimer().start(2, function(tmr:FlxTimer) {
 			FlxG.switchState(new MainMenuState());
+			}
 		}
 
 		if (pressedEnter && !skippedIntro && initialized)
