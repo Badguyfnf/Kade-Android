@@ -14,7 +14,7 @@ class Character extends FlxSprite
 
 	public var isPlayer:Bool = false;
 	public var curCharacter:String = 'bf';
-	public var color:FlxColor = 0xFFFF0000
+	public var color:FlxColor = 0xFFFF0000;
 
 	public var holdTimer:Float = 0;
 
@@ -403,6 +403,9 @@ class Character extends FlxSprite
 				antialiasing = false;
 
 				flipX = true;
+
+				color = 0xFF7BD6F6;
+
 			case 'bf-pixel-dead':
 				frames = Paths.getSparrowAtlas('characters/bfPixelsDEAD');
 				animation.addByPrefix('singUP', "BF Dies pixel", 24, false);
