@@ -14,6 +14,7 @@ class Character extends FlxSprite
 
 	public var isPlayer:Bool = false;
 	public var curCharacter:String = 'bf';
+	public var color:FlxColor = 0xFFFF0000
 
 	public var holdTimer:Float = 0;
 
@@ -307,6 +308,8 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
+
+				color = 0xFF31B0D1;
 
 			case 'bf-christmas':
 				var tex = Paths.getSparrowAtlas('characters/bfChristmas');
