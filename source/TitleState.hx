@@ -321,6 +321,8 @@ class TitleState extends MusicBeatState
 			// FlxG.sound.music.stop();
 
 			MainMenuState.firstStart = true;
+
+			FlxG.switchState(new MainMenuState());
 		}
 
 		if (pressedEnter && !skippedIntro && initialized)
