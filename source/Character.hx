@@ -339,6 +339,9 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
+
+				color = 0xFF31B0D1;
+
 			case 'bf-car':
 				var tex = Paths.getSparrowAtlas('characters/bfCar');
 				frames = tex;
@@ -364,6 +367,9 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
+
+				color = 0xFF31B0D1;
+
 			case 'bf-pixel':
 				frames = Paths.getSparrowAtlas('characters/bfPixel');
 				animation.addByPrefix('idle', 'BF IDLE', 24, false);
