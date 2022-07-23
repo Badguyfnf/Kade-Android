@@ -88,7 +88,7 @@ class AndroidControls extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Android Controls";
+		return "Controls";
 	}
 }
 
