@@ -64,7 +64,7 @@ class Character extends FlxSprite
 
 				playAnim('danceRight');
 
-				color = 0xFFA5004D;
+				healthBarcolor = 0xFFA5004D;
 
 			case 'gf-christmas':
 				tex = Paths.getSparrowAtlas('characters/gfChristmas');
@@ -144,7 +144,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				color = 0xFFAF66CE;
+				healthBarcolor = 0xFFAF66CE;
 
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
