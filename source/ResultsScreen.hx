@@ -75,7 +75,7 @@ class ResultsScreen extends MusicBeatSubstate
             text.text = "Week Cleared!";
         }
 
-        comboText = new FlxText(20,-75,0,'Judgements:\nSicks - ${PlayState.sicks}\nGoods - ${PlayState.goods}\nBads - ${PlayState.bads}\n\nCombo Breaks: ${(PlayState.isStoryMode ? PlayState.campaignMisses : PlayState.misses)}\nHighest Combo: ${PlayState.highestCombo + 1}\n\nScore: ${PlayState.instance.songScore}\nAccuracy: ${HelperFunctions.truncateFloat(PlayState.instance.accuracy,2)}%\n\n${Ratings.GenerateLetterRank(PlayState.instance.accuracy)}\n\nF1 - View replay\nF2 - Replay song
+        comboText = new FlxText(20,-75,0,'Judgements:\nSicks - ${PlayState.sicks}\nGoods - ${PlayState.goods}\nBads - ${PlayState.bads}\n\nCombo Breaks: ${(PlayState.isStoryMode ? PlayState.campaignMisses : PlayState.misses)}\nHighest Combo: ${PlayState.highestCombo + 1}\n\nScore: ${PlayState.instance.songScore}\nAccuracy: ${HelperFunctions.truncateFloat(PlayState.instance.accuracy,2)}%\n\n${Ratings.GenerateLetterRank(PlayState.instance.accuracy)}\n\nC - View replay\nB - Replay song
         ');
         comboText.size = 28;
         comboText.setBorderStyle(FlxTextBorderStyle.OUTLINE,FlxColor.BLACK,4,1);
@@ -161,7 +161,7 @@ class ResultsScreen extends MusicBeatSubstate
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
     #if android
-    addVirtualPad(NONE, A);
+    addVirtualPad(NONE, A_B_C);
     addPadCamera();
     #end
 
@@ -200,7 +200,7 @@ class ResultsScreen extends MusicBeatSubstate
             graph.update();
         }
 
-        if (FlxG.keys.justPressed.F1)
+        if (_virtualpad.buttonC.pressed)
         {
             trace(PlayState.rep.path);
             PlayState.rep = Replay.LoadReplay(PlayState.rep.path);
@@ -227,7 +227,7 @@ class ResultsScreen extends MusicBeatSubstate
             LoadingState.loadAndSwitchState(new PlayState());
         }
 
-        if (FlxG.keys.justPressed.F2 )
+        if (controls.BACK)
         {
             PlayState.rep = null;
 
