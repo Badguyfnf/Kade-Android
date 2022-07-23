@@ -927,7 +927,7 @@ class PlayState extends MusicBeatState
 
 		generateSong(SONG.song);
 
-		HealthShit = 1/(SONG.bpm*0.2)
+		HealthShit = 1/(SONG.bpm*0.2);
 
 		trace('generated');
 
