@@ -132,6 +132,7 @@ class PlayState extends MusicBeatState
 
 	private var gfSpeed:Int = 1;
 	public var health:Float = 1; //making public because sethealth doesnt work without it
+	private var HealthShit:Float = 1/(SONG.bpm*0.2);
 	private var combo:Int = 0;
 	public static var misses:Int = 0;
 	public static var campaignMisses:Int = 0;
@@ -2737,7 +2738,7 @@ class PlayState extends MusicBeatState
 			if (FlxG.save.data.accuracyMod == 0)
 				totalNotesHit += 1;
 
-			health += 1/(SONG.bpm*0.2);
+			health += HealthShit;
 
 			switch(daRating)
 			{
@@ -2745,7 +2746,7 @@ class PlayState extends MusicBeatState
 					score = -300;
 					combo = 0;
 					misses++;
-					health -= 2/(SONG.bpm*0.2);
+					health -= 2*HealthShit;
 					ss = false;
 					shits++;
 				case 'bad':
@@ -3282,7 +3283,7 @@ class PlayState extends MusicBeatState
 	{
 		if (!boyfriend.stunned)
 		{
-			health -= 1/(SONG.bpm*0.2);
+			health -= HealthShit;
 			if (combo > 5 && gf.animOffsets.exists('sad'))
 			{
 				gf.playAnim('sad');
