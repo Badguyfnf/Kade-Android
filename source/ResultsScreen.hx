@@ -161,7 +161,7 @@ class ResultsScreen extends MusicBeatSubstate
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
     #if android
-    addVirtualPad(NONE, A_B_C);
+    addVirtualPad(NONE, A_B);
     addPadCamera();
     #end
 
