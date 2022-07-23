@@ -132,7 +132,7 @@ class PlayState extends MusicBeatState
 
 	private var gfSpeed:Int = 1;
 	public var health:Float = 1; //making public because sethealth doesnt work without it
-	private var HealthShit:Float;
+	private var HealthShit:Float = 0.01;
 	private var combo:Int = 0;
 	public static var misses:Int = 0;
 	public static var campaignMisses:Int = 0;
