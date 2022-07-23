@@ -2737,7 +2737,7 @@ class PlayState extends MusicBeatState
 			if (FlxG.save.data.accuracyMod == 0)
 				totalNotesHit += 1;
 
-			health += (SONG.bpm * -0.001) + 0.35
+			health += (SONG.bpm * -0.001) + 0.35;
 
 			switch(daRating)
 			{
