@@ -23,7 +23,7 @@ class AndroidControlsMenu extends MusicBeatState
 	var inputvari:PsychAlphabet;
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
-	var controlitems:Array<String> = ['Pad-Right','Pad-Left','Pad-Custom','Duo','Hitbox','Keyboard'];
+	var controlitems:Array<String> = ['Pad-Right','Pad-Left','Pad-Custom','Duo','Hitbox'];
 	var curSelected:Int = 0;
 	var buttonistouched:Bool = false;
 	var bindbutton:FlxButton;
