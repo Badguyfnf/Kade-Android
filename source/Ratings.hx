@@ -141,7 +141,7 @@ class Ratings
     {
         return
          (FlxG.save.data.npsDisplay ?																							// NPS Toggle
-         "NPS: " + nps + " (Max " + maxNPS + ")" + (PlayState.loadRep ? " | " : "") : "") +								// 	NPS
+         "NPS: " + nps + " (Max " + maxNPS + ")" + (!PlayStateChangeables.botPlay || PlayState.loadRep ? " | " : "") : "") +								// 	NPS
          (PlayState.loadRep ? "Score:" + (Conductor.safeFrames != 10 ? score + " (" + scoreDef + ")" : "" + score) + 		// Score
          (FlxG.save.data.accuracyDisplay ?																						// Accuracy Toggle
          " | Combo Breaks:" + PlayState.misses + 																				// 	Misses/Combo Breaks
