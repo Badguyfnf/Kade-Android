@@ -64,6 +64,8 @@ class Character extends FlxSprite
 
 				playAnim('danceRight');
 
+				color = 0xFFA5004D;
+
 			case 'gf-christmas':
 				tex = Paths.getSparrowAtlas('characters/gfChristmas');
 				frames = tex;
@@ -141,6 +143,9 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+
+				color = 0xFFAF66CE;
+
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
