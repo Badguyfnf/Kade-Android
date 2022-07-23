@@ -2737,7 +2737,7 @@ class PlayState extends MusicBeatState
 			if (FlxG.save.data.accuracyMod == 0)
 				totalNotesHit += 1;
 
-			health += (SONG.bpm * -0.001) + 0.35;
+			health += 1/(SONG.bpm*0.2);
 
 			switch(daRating)
 			{
@@ -2745,7 +2745,7 @@ class PlayState extends MusicBeatState
 					score = -300;
 					combo = 0;
 					misses++;
-					health -= ((SONG.bpm * -0.001) + 0.35) * 2;
+					health -= 2/(SONG.bpm*0.2);
 					ss = false;
 					shits++;
 				case 'bad':
@@ -3282,7 +3282,7 @@ class PlayState extends MusicBeatState
 	{
 		if (!boyfriend.stunned)
 		{
-			health -= (SONG.bpm * -0.001) + 0.35;
+			health -= 1/(SONG.bpm*0.2);
 			if (combo > 5 && gf.animOffsets.exists('sad'))
 			{
 				gf.playAnim('sad');
