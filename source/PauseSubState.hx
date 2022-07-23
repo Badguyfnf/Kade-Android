@@ -25,7 +25,6 @@ class PauseSubState extends MusicBeatSubstate
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
-	var perSongOffset:FlxText;
 	
 	var offsetChanged:Bool = false;
 
@@ -77,13 +76,6 @@ class PauseSubState extends MusicBeatSubstate
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
-		perSongOffset = new FlxText(5, FlxG.height - 18, 0, "Additive Offset (Left, Right): " + PlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.', 12);
-		perSongOffset.scrollFactor.set();
-		perSongOffset.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		
-		#if cpp
-			add(perSongOffset);
-		#end
 
 		for (i in 0...menuItems.length)
 		{
@@ -142,7 +134,6 @@ class PauseSubState extends MusicBeatSubstate
 				oldOffset = PlayState.songOffset;
 				PlayState.songOffset -= 1;
 				sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + PlayState.songOffset + '.offset');
-				perSongOffset.text = "Additive Offset (Left, Right): " + PlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.';
 
 				// Prevent loop from happening every single time the offset changes
 				if(!offsetChanged)
@@ -169,7 +160,7 @@ class PauseSubState extends MusicBeatSubstate
 				oldOffset = PlayState.songOffset;
 				PlayState.songOffset += 1;
 				sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + PlayState.songOffset + '.offset');
-				perSongOffset.text = "Additive Offset (Left, Right): " + PlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.';
+
 				if(!offsetChanged)
 				{
 					grpMenuShit.clear();
