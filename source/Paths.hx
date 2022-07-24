@@ -107,7 +107,7 @@ class Paths
 				case 'dad-battle': songLowercase = 'dadbattle';
 				case 'philly-nice': songLowercase = 'philly';
 			}
-		return 'songs:assets/data/${songLowercase}/Voices.$SOUND_EXT';
+		return getPath('data/${songLowercase}/Voices.$SOUND_EXT');
 	}
 
 	inline static public function inst(song:String)
@@ -117,7 +117,7 @@ class Paths
 				case 'dad-battle': songLowercase = 'dadbattle';
 				case 'philly-nice': songLowercase = 'philly';
 			}
-		return 'songs:assets/data/${songLowercase}/Inst.$SOUND_EXT';
+		return getPath('data/${songLowercase}/Inst.$SOUND_EXT');
 	}
 
 	inline static public function image(key:String, ?library:String)
