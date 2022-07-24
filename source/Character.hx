@@ -530,6 +530,9 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+
+				healthBarcolor = 0xFFC45EAE;
+
 		}
 
 		dance();
