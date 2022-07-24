@@ -224,6 +224,9 @@ class Character extends FlxSprite
 				addOffset("singLEFT", -30);
 				addOffset("singDOWN", -30, -40);
 				playAnim('idle');
+
+				healthBarcolor = 0xFFF3FF6E;
+
 			case 'monster-christmas':
 				tex = Paths.getSparrowAtlas('characters/monsterChristmas');
 				frames = tex;
@@ -239,6 +242,9 @@ class Character extends FlxSprite
 				addOffset("singLEFT", -30);
 				addOffset("singDOWN", -40, -94);
 				playAnim('idle');
+
+				healthBarcolor = 0xFFF3FF6E;
+
 			case 'pico':
 				tex = Paths.getSparrowAtlas('characters/Pico_FNF_assetss');
 				frames = tex;
