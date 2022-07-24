@@ -457,6 +457,9 @@ class Character extends FlxSprite
 				updateHitbox();
 
 				antialiasing = false;
+
+				healthBarcolor = 0xFFFFAA6F;
+
 			case 'senpai-angry':
 				frames = Paths.getSparrowAtlas('characters/senpai');
 				animation.addByPrefix('idle', 'Angry Senpai Idle', 24, false);
@@ -476,6 +479,8 @@ class Character extends FlxSprite
 				updateHitbox();
 
 				antialiasing = false;
+
+				healthBarcolor = 0xFFFFAA6F;
 
 			case 'spirit':
 				frames = Paths.getPackerAtlas('characters/spirit');
