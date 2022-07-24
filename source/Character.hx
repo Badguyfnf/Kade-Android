@@ -503,6 +503,8 @@ class Character extends FlxSprite
 
 				antialiasing = false;
 
+				healthBarcolor = 0xFFFF3C6E;
+
 			case 'parents-christmas':
 				frames = Paths.getSparrowAtlas('characters/mom_dad_christmas_assets');
 				animation.addByPrefix('idle', 'Parent Christmas Idle', 24, false);
