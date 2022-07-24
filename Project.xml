@@ -48,7 +48,6 @@
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
 	
 	<section if="PRELOAD_ALL">
-		<library name="songs"    preload="true" />
 		<library name="shared"   preload="true" />
 		<library name="tutorial" preload="true" />
 		<library name="week1"    preload="true" />
@@ -60,7 +59,6 @@
 	</section>
 	
 	<section if="NO_PRELOAD_ALL">
-		<library name="songs"    preload="false" />
 		<library name="shared"   preload="false" />
 		<library name="tutorial" preload="false" />
 		<library name="week1"    preload="false" />
@@ -70,9 +68,7 @@
 		<library name="week5"    preload="false" />
 		<library name="week6"    preload="false" />
 	</section>
-	
-	<assets path="assets/songs"    library="songs"    exclude="*.ogg" if="web"/>
-	<assets path="assets/songs"    library="songs"    exclude="*.mp3" unless="web"/>
+
 	<assets path="assets/shared"   library="shared"   exclude="*.ogg" if="web"/>
 	<assets path="assets/shared"   library="shared"   exclude="*.mp3" unless="web"/>
 	<assets path="assets/tutorial" library="tutorial" exclude="*.ogg" if="web"/>
