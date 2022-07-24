@@ -278,6 +278,8 @@ class Character extends FlxSprite
 
 				flipX = true;
 
+				healthBarcolor = 0xFFB7D855;
+
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND', 'shared');
 				frames = tex;
