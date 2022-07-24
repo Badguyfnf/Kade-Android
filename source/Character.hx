@@ -185,6 +185,8 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
+				healthBarcolor = 0xFFD8558E;
+
 			case 'mom-car':
 				tex = Paths.getSparrowAtlas('characters/momCar');
 				frames = tex;
@@ -204,6 +206,9 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 20, -160);
 
 				playAnim('idle');
+
+				healthBarcolor = 0xFFD8558E;
+
 			case 'monster':
 				tex = Paths.getSparrowAtlas('characters/Monster_Assets');
 				frames = tex;
